@@ -3,6 +3,9 @@
 
     WORKDIR /app
     
+    # Install build tools for native dependencies
+    RUN apk add --no-cache python3 make g++
+    
     # Install dependencies
     COPY package.json package-lock.json ./
     RUN npm ci
