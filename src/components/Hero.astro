@@ -1,5 +1,6 @@
 ---
-import { Image } from "@astrojs/image/components";
+// import { Image } from "@astrojs/image/components";
+import {Image} from 'astro:assets';
 ---
 
 <header class="relative h-72 md:h-96" role="banner">
@@ -10,8 +11,8 @@ import { Image } from "@astrojs/image/components";
       alt="White Georgette Fabric - Lightweight and soft for elegant outfits"
       width={600}
       height={400}
-      loading="lazy"
-      format="avif"
+      loading="eager"
+      fetchpriority="high"
       class="object-cover w-full h-full"
     />
     <div

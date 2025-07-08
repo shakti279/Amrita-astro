@@ -10,10 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/image": "^3.0.0",
+    "@astrojs/image": "^0.18.0",
     "@astrojs/node": "^9.3.0",
     "@tailwindcss/vite": "^4.1.11",
     "astro": "^5.11.0",
+    "astro-compress": "^2.3.8",
+    "compress": "^0.99.0",
+    "compression": "^1.8.0",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.1.11"
   },

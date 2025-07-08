@@ -3,6 +3,7 @@ import tailwindcss from '@tailwindcss/vite';
 import node from '@astrojs/node';
 import image from '@astrojs/image';
 import compression from 'vite-plugin-compression';
+import astroCompress from 'astro-compress'; // <-- add this import
 
 export default defineConfig({
   vite: {
@@ -14,5 +15,8 @@ export default defineConfig({
   },
   output: 'server',
   adapter: node({ mode: 'standalone' }),
-  integrations: [image()],
+  integrations: [
+    image(),
+    astroCompress({ brotli: true, gzip: true }) // <-- use the imported function
+  ],
 });
