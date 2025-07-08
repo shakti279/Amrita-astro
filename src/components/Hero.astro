@@ -1,25 +1,25 @@
 ---
-import fabricImage from "../assets/fabric.avif";
+import { Image } from "@astrojs/image/components";
 ---
 
 <header class="relative h-72 md:h-96" role="banner">
   <!-- Background Image and Overlay -->
   <div class="absolute inset-0 w-full h-full">
-    <img
-      src="fabric.avif"
-      alt="Woman wearing premium georgette fabric"
-      width="1268"
-      height="384"
-      loading="eager"
-      fetchpriority="high"
+    <Image
+      src="/hero123.avif"
+      alt="White Georgette Fabric - Lightweight and soft for elegant outfits"
+      width={600}
+      height={400}
+      loading="lazy"
+      format="avif"
       class="object-cover w-full h-full"
-      style="z-index:0;"
     />
     <div
       class="absolute inset-0 bg-black opacity-30 w-full h-full"
       aria-hidden="true"
       style="z-index:1;"
-    ></div>
+    >
+    </div>
   </div>
 
   <!-- Main Hero Content -->
