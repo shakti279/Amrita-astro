@@ -1,8 +1,7 @@
 ---
-
+import { Image } from "astro:assets";
 ---
 
-<!-- Proper frontmatter, even if empty -->
 <section
   id="product"
   class="section bg-primary py-12"
@@ -40,14 +39,13 @@
             <figure
               class="w-full h-56 bg-gray-100 rounded mb-4 overflow-hidden relative"
             >
-              <img
-                src="/fabric.avif"
+              <Image
+                src="/hero123.avif"
                 alt="White Georgette Fabric - Lightweight and soft for elegant outfits"
-                width="600"
-                height="400"
+                width={600}
+                height={400}
                 loading="lazy"
                 class="object-cover w-full h-full"
-                sizes="(max-width: 768px) 100vw, (max-width: 1268px) 50vw, 33vw"
               />
             </figure>
             <h3
@@ -81,11 +79,11 @@
             <figure
               class="w-full h-56 bg-gray-100 rounded mb-4 overflow-hidden relative"
             >
-              <img
-                src="/fabric.avif"
+              <Image
+                src="/hero123.avif"
                 alt="Purple Georgette Fabric - Vibrant and bold for statement designs"
-                width="600"
-                height="400"
+                width={600}
+                height={400}
                 loading="lazy"
                 class="object-cover w-full h-full"
               />
@@ -126,12 +124,12 @@
             <figure
               class="w-full h-56 bg-gray-100 rounded mb-4 overflow-hidden relative"
             >
-              <img
-                src="/fabric.avif"
+              <Image
+                src="/hero123.avif"
                 alt="Gold Georgette Fabric - Shimmering fabric for festive and special occasions"
-                width="600"
-                height="400"
+                width={600}
                 loading="lazy"
+                height={400}
                 class="object-cover w-full h-full"
               />
             </figure>
@@ -168,11 +166,11 @@
         <figure
           class="w-full h-64 bg-gray-100 rounded mb-4 overflow-hidden relative"
         >
-          <img
-            src="/fabric.avif"
+          <Image
+            src="/hero123.avif"
             alt="White Georgette Fabric - Lightweight and soft for elegant outfits"
-            width="600"
-            height="400"
+            width={600}
+            height={400}
             loading="lazy"
             class="object-cover w-full h-full"
           />
@@ -196,11 +194,11 @@
         <figure
           class="w-full h-64 bg-gray-100 rounded mb-4 overflow-hidden relative"
         >
-          <img
-            src="/fabric.avif"
+          <Image
+            src="/hero123.avif"
             alt="Purple Georgette Fabric - Vibrant and bold for statement designs"
-            width="600"
-            height="400"
+            width={600}
+            height={400}
             loading="lazy"
             class="object-cover w-full h-full"
           />
@@ -224,11 +222,11 @@
         <figure
           class="w-full h-64 bg-gray-100 rounded mb-4 overflow-hidden relative"
         >
-          <img
-            src="/fabric.avif"
+          <Image
+            src="/hero123.avif"
             alt="Gold Georgette Fabric - Shimmering and luxurious for weddings and parties"
-            width="600"
-            height="400"
+            width={600}
+            height={400}
             loading="lazy"
             class="object-cover w-full h-full"
           />

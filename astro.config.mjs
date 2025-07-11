@@ -10,8 +10,12 @@ export default defineConfig({
     plugins: [
       tailwindcss(),
       compression({ algorithm: 'gzip' }),
-      compression({ algorithm: 'brotliCompress' })
+      compression({ algorithm: 'brotliCompress' }),
+ 
     ],
+    build: {
+      minify: 'terser', // ✅ Proper way to use Terser with Vite
+    },
   },
   output: 'server',
   adapter: node({ mode: 'standalone' }),

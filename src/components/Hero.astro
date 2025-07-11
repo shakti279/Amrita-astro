@@ -1,47 +1,51 @@
 ---
-// import { Image } from "@astrojs/image/components";
-import {Image} from 'astro:assets';
+import { Image } from "astro:assets";
+import heroImg from "../../public/hero123.avif";
 ---
+
+<head>
+  <link rel="preload" as="image" href={heroImg.src} />
+</head>
 
 <header class="relative h-72 md:h-96" role="banner">
   <!-- Background Image and Overlay -->
   <div class="absolute inset-0 w-full h-full">
     <Image
-      src="/hero123.avif"
+      src='/hero123.avif'
       alt="White Georgette Fabric - Lightweight and soft for elegant outfits"
-      width={600}
-      height={400}
+      width={1000}
+      height={313}
+      format="avif"
+      quality={70}
       loading="eager"
       fetchpriority="high"
+      sizes="(min-width: 768px) 1000px, 100vw"
       class="object-cover w-full h-full"
-    />
-    <div
-      class="absolute inset-0 bg-black opacity-30 w-full h-full"
-      aria-hidden="true"
-      style="z-index:1;"
-    >
-    </div>
-  </div>
+     />
+      <div class="absolute inset-0 bg-black opacity-30" aria-hidden="true">
+      </div>
+    </Image>
 
-  <!-- Main Hero Content -->
-  <div
-    class="relative z-10 max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-6 h-full"
-  >
+    <!-- Main Hero Content -->
     <div
-      class="bg-secondary/80 p-8 rounded-lg"
-      aria-labelledby="hero-title"
-      aria-describedby="hero-sub"
+      class="relative z-10 max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 px-6 h-full"
     >
-      <h1
-        id="hero-title"
-        class="text-xl md:text-2xl font-[400] san text-white mb-6"
+      <div
+        class="bg-secondary/80 p-8 rounded-lg"
+        aria-labelledby="hero-title"
+        aria-describedby="hero-sub"
       >
-        Georgette Fabric Manufacturers
-      </h1>
-      <p id="hero-sub" class="text-white pop text-[14px]">
-        High-quality fabrics crafted in Surat, perfect for designers, exporters,
-        and resellers.
-      </p>
+        <h1
+          id="hero-title"
+          class="text-xl md:text-2xl font-[400] san text-white mb-6"
+        >
+          Georgette Fabric Manufacturers
+        </h1>
+        <p id="hero-sub" class="text-white pop text-[14px]">
+          High-quality fabrics crafted in Surat, perfect for designers,
+          exporters, and resellers.
+        </p>
+      </div>
     </div>
   </div>
 </header>
